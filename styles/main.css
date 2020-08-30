@@ -3961,3 +3961,78 @@ body.is-preload #sidebar nav ul li {
     background-attachment: scroll;
   }
 }
+
+/* original code from VERDIEU Steeve
+November 18, 2018; edited and re-formatted for current project*/
+
+.card {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card_part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  width: 50em;
+  height: 25em;
+  transform: translateX(50em);
+  animation: opaqTransition 13s cubic-bezier(0, 0, 0, 0.97) infinite;
+}
+
+.card_part.card_part-two {
+  z-index: 6;
+  animation-delay: 4s;
+}
+
+.card_part.card_part-three {
+  z-index: 5;
+  animation-delay: 8s;
+}
+
+.card_part.card_part-four {
+  z-index: 4;
+  animation-delay: 12s;
+}
+
+@keyframes opaqTransition {
+  3% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  28% {
+    transform: translateX(-50em);
+  }
+  100% {
+    transform: translateX(-50em);
+  }
+}
+/* @keyframes opaqTransition {
+  3% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-50em);
+  }
+  63% {
+    transform: translateX(-50em);
+  }
+  66% {
+    transform: translateX(-50em);
+  }
+  100% {
+    transform: translateX(-50em);
+  }
+} */
